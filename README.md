@@ -93,4 +93,4 @@ Maybe need to patch Aliplay functions
 | goodix_disable_screen_lock         | D2A8        | yes                           | CMP X2, X1  |
 | goodix_disable_screen_lock         | D2B0        | yes                           | CMP X2, X1  |
 
-12 functions, 58 patch places
+16 functions, 78 patch places
