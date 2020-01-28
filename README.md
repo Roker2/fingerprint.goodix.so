@@ -2,75 +2,71 @@ By Roker2
 
 ## fingerprint.goodix.so
 
-Need to change to CMP X2, X1 or CMP X1, X0
+Need to change to NOP
 
-CMP X2, X1 = 5F 00 01 EB in HEX
+NOP = 1F 20 03 D5 in HEX
 
-CMP X1, X0 = 3F 00 00 EB in HEX
+Based on comparing Xiaomi Redmi 4X blobs
 
-Based on comparing Leeco S2 blobs
-
-Maybe need to patch Aliplay functions
-
-| Function                           | Patch place | Patch status (patched or not) | New command |
-| :--------------------------------- | :---------- | :---------------------------- | :---------- |
-| goodix_sensor_fp_enroll            | C3F0        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_enroll            | C3F4        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_enroll            | C3F8        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_enroll            | C3FC        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_enroll            | C404        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_clear_enroll_env  | C548        | no                            | CMP X1, X0  |
-| goodix_sensor_fp_clear_enroll_env  | C54C        | no                            | CMP X1, X0  |
-| goodix_sensor_fp_clear_enroll_env  | C550        | no                            | CMP X1, X0  |
-| goodix_sensor_fp_clear_enroll_env  | C558        | no                            | CMP X1, X0  |
-| goodix_sensor_fp_set_session_id    | C644        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_set_session_id    | C648        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_set_session_id    | C64C        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_set_session_id    | C650        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_set_session_id    | C658        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_match             | C770        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_match             | C774        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_match             | C778        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_match             | C77C        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_match             | C784        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_cancel            | C8EC        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_cancel            | C8F0        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_cancel            | C8F4        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_cancel            | C8F8        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_cancel            | C900        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_save              | C9DC        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_save              | C9E0        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_save              | C9E4        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_save              | C9E8        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_save              | C9F0        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_get_fp_list       | CB0C        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_get_fp_list       | CB10        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_get_fp_list       | CB14        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_get_fp_list       | CB1C        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_remove            | CD5C        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_remove            | CD60        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_remove            | CD64        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_remove            | CD68        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_remove            | CD70        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_gxCmd             | CFB0        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_gxCmd             | CFB4        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_gxCmd             | CFB8        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_gxCmd             | CFBC        | no                            | CMP X2, X1  |
-| goodix_sensor_fp_gxCmd             | CFC4        | no                            | CMP X2, X1  |
-| goodix_sensor_init                 | BA58        | no                            | CMP X2, X1  |
-| goodix_sensor_init                 | BA5C        | no                            | CMP X2, X1  |
-| goodix_sensor_init                 | BA60        | no                            | CMP X2, X1  |
-| goodix_sensor_init                 | BA64        | no                            | CMP X2, X1  |
-| goodix_sensor_init                 | BA6C        | no                            | CMP X2, X1  |
-| goodix_sensor_set_active_group     | BEA8        | no                            | CMP X2, X1  |
-| goodix_sensor_set_active_group     | BEAC        | no                            | CMP X2, X1  |
-| goodix_sensor_set_active_group     | BEB0        | no                            | CMP X2, X1  |
-| goodix_sensor_set_active_group     | BEB4        | no                            | CMP X2, X1  |
-| goodix_sensor_set_active_group     | BEBC        | no                            | CMP X2, X1  |
-| goodix_sensor_fill_auth_token_hmac | C0D4        | no                            | CMP X2, X1  |
-| goodix_sensor_fill_auth_token_hmac | C0D8        | no                            | CMP X2, X1  |
-| goodix_sensor_fill_auth_token_hmac | C0DC        | no                            | CMP X2, X1  |
-| goodix_sensor_fill_auth_token_hmac | C0E0        | no                            | CMP X2, X1  |
-| goodix_sensor_fill_auth_token_hmac | C0E8        | no                            | CMP X2, X1  |
+| Function                           | Patch place | Patch status (patched or not) |
+| :--------------------------------- | :---------- | :---------------------------- |
+| GxFpDevice::notify                 | B214        | no                            |
+| GxFpDevice::notify                 | B218        | no                            |
+| GxFpDevice::notify                 | B21C        | no                            |
+| GxFpDevice::notify                 | B220        | no                            |
+| GxFpDevice::notify                 | B224        | no                            |
+| GxFpDevice::notify                 | B228        | no                            |
+| GxFpDevice::notify                 | B22C        | no                            |
+| GxFpDevice::notify                 | B234        | no                            |
+| GxFpDevice::notify                 | B238        | no                            |
+| GxFpDevice::notify                 | B23C        | no                            |
+| GxFpDevice::notify                 | B240        | no                            |
+| GxFpDevice::notifyData             | AE2C        | no                            |
+| GxFpDevice::notifyData             | AE30        | no                            |
+| GxFpDevice::notifyData             | AE34        | no                            |
+| GxFpDevice::notifyData             | AE38        | no                            |
+| GxFpDevice::notifyData             | AE3C        | no                            |
+| GxFpDevice::notifyData             | AE40        | no                            |
+| GxFpDevice::notifyData             | AE44        | no                            |
+| GxFpDevice::notifyData             | AE4C        | no                            |
+| GxFpDevice::notifyData             | AE50        | no                            |
+| GxFpDevice::notifyData             | AE54        | no                            |
+| GxFpDevice::notifyData             | AE58        | no                            |
+| goodix_sensor_init                 | BA60        | no                            |
+| goodix_sensor_init                 | BA64        | no                            |
+| goodix_sensor_init                 | BA68        | no                            |
+| goodix_sensor_init                 | BA6C        | no                            |
+| goodix_sensor_init                 | BAF0        | no                            |
+| goodix_sensor_init                 | BAF4        | no                            |
+| goodix_sensor_init                 | BAF8        | no                            |
+| goodix_sensor_init                 | BAFC        | no                            |
+| goodix_sensor_init                 | BB00        | no                            |
+| goodix_sensor_init                 | BB04        | no                            |
+| goodix_sensor_init                 | BB08        | no                            |
+| goodix_sensor_init                 | BB9C        | no                            |
+| goodix_sensor_init                 | BBA0        | no                            |
+| goodix_sensor_init                 | BBA4        | no                            |
+| goodix_sensor_init                 | BBA8        | no                            |
+| goodix_sensor_init                 | BBAC        | no                            |
+| goodix_sensor_init                 | BBB0        | no                            |
+| goodix_sensor_init                 | BBB4        | no                            |
+| goodix_sensor_init                 | BBCC        | no                            |
+| goodix_sensor_init                 | BBD0        | no                            |
+| goodix_sensor_init                 | BBD4        | no                            |
+| goodix_sensor_init                 | BBD8        | no                            |
+| goodix_sensor_init                 | BBDC        | no                            |
+| goodix_sensor_init                 | BBE0        | no                            |
+| goodix_sensor_init                 | BBE4        | no                            |
+| goodix_sensor_init                 | BBE8        | no                            |
+| goodix_sensor_init                 | BBEC        | no                            |
+| goodix_sensor_init                 | BBF0        | no                            |
+| goodix_sensor_init                 | BBF4        | no                            |
+| goodix_sensor_init                 | BC00        | no                            |
+| goodix_sensor_init                 | BC04        | no                            |
+| goodix_sensor_init                 | BC08        | no                            |
+| goodix_sensor_init                 | BC0C        | no                            |
+| goodix_sensor_init                 | BC10        | no                            |
+| goodix_sensor_init                 | BC14        | no                            |
+| goodix_sensor_init                 | BC18        | no                            |
 
 12 functions, 58 patch places
