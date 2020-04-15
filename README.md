@@ -13,6 +13,7 @@ Original idea by @aranhid
 https://github.com/aranhid/proprietary_vendor_xiaomi/commit/b33dfabcb392e635c532fbd547921a2d2c600833
 
 | Function                           | Patch place | New memory size | Patch status (patched or not) |
+| :--------------------------------- | :---------- | :-------------- | :---------------------------- |
 | getFrameworkFingerID(int *, int)   | DD58        | -0x180          | No                            |
 | getFrameworkFingerID(int *, int)   | DD94        | 0x180-8         | No                            |
 | getFrameworkFingerID(int *, int)   | DDC8        | 0x100           | No                            |
