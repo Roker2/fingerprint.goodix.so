@@ -24,5 +24,7 @@ https://github.com/aranhid/proprietary_vendor_xiaomi/commit/b33dfabcb392e635c532
 
 ## Comments ##
 DF94 - LDP X29, X30, [SP],#0x160 (thanks IDA -_-)
+
 #0x160+var_70 = #0xF0
+
 #0x180+var_80 = #0x100
