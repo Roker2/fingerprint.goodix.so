@@ -23,7 +23,7 @@ https://github.com/aranhid/proprietary_vendor_xiaomi/commit/b33dfabcb392e635c532
 | getFrameworkFingerID(int *, int)     | DF94        | 0x180           | No                            |
 | getFrameworkFingerID(int *, int)     | DFB4        | 0x100           | No                            |
 | getFrameworkFingerID(int *, int)     | DFD0        | 0x100           | No                            |
-| removeSettingFingerprintId(int, int) | DFFC        | 0x1A0           | No                            |
+| removeSettingFingerprintId(int, int) | DFFC        | -0x1A0          | No                            |
 | removeSettingFingerprintId(int, int) | E040        | 0x1A0-8         | No                            |
 | removeSettingFingerprintId(int, int) | E07C        | 0x120           | No                            |
 | removeSettingFingerprintId(int, int) | E1BC        | 0x1A0-8         | No                            |
